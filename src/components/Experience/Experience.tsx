@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaServer, FaLaptopCode } from 'react-icons/fa';
 
 const projects = [
@@ -39,18 +38,14 @@ const projects = [
 ];
 
 const Experience = () => {
-  const [activeProject, setActiveProject] = useState<number | null>(null);
-
   return (
     <section id="experience" className="section-container">
       <h2 className="section-title">Experience</h2>
       <div className="grid md:grid-cols-2 gap-8">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div
             key={project.title}
             className="bg-primary/50 p-6 rounded-lg border border-accent/20 hover:border-accent/40 transition-colors"
-            onMouseEnter={() => setActiveProject(index)}
-            onMouseLeave={() => setActiveProject(null)}
           >
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-4">
